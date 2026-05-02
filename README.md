@@ -2,6 +2,9 @@
 
 # APB SPI Core — 7nm ASAP7 Implementation
 
+> ⚠️ **This repo uses [Git LFS](https://git-lfs.github.com/) for the ASAP7 liberty file (330 MB).**  
+> Run `git lfs install` before cloning, or the lib file will be a stub and synthesis will fail.
+
 **A fully functional SPI Master controller with APB slave interface,**  
 **synthesized and verified on the ASAP7 7nm predictive process node.**
 
@@ -371,12 +374,19 @@ flowchart TD
 
 | Tool | Version | Purpose |
 |:---|:---:|:---|
+| Git LFS | 3.0+ | Required to clone the ASAP7 lib file (330 MB) |
 | Yosys | 0.64+ | Open-source synthesis |
 | OpenSTA | 3.1.0+ | Static timing & power analysis |
 | Synopsys Design Compiler | X-2025.06 | RTL synthesis (industry flow) |
 | Synopsys VC Static | X-2025.06 | RTL lint checking |
 | Vivado | 2025.2 | Simulation & schematic |
 | OSS CAD Suite | 2026 | Open-source EDA environment |
+
+**Before cloning:**
+```bash
+git lfs install
+git clone https://github.com/QubitCrafter/apb-spi-core.git
+```
 
 ### Lint Check (Synopsys VC Static)
 ```bash
