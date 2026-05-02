@@ -1,0 +1,99 @@
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : spi_core
+Tool   : Yosys 0.64 + OpenSTA 3.1.0
+Date   : Sat May 02 13:45:02 2026
+****************************************
+Operating Conditions: TT_0P7V_25C   Library: asap7_merged_RVT_TT
+Wire Load Model Mode: top
+
+  Startpoint: PSEL_i
+              (input port clocked by my_clk)
+  Endpoint: PRDATA_o[0]
+            (output port clocked by my_clk)
+  Path Group: my_clk
+  Path Type: max
+
+  Point                                                      Incr       Path
+  ---------------------------------------------------------------------------
+  clock my_clk (rise edge)                               0.0000     0.0000
+  clock network delay (ideal)                            0.0000     0.0000
+  input external delay                                4000.0000  4000.0000 ^
+  PSEL_i (in)                                            0.0000  4000.0000 ^
+  apb_interface/_173_/A (NAND2xp33_ASAP7_75t_R)         0.0000  4000.0000 ^
+  apb_interface/_173_/Y (NAND2xp33_ASAP7_75t_R)        11.9962  4011.9961 v
+  apb_interface/_175_/B (NOR2xp33_ASAP7_75t_R)          0.0000  4011.9961 v
+  apb_interface/_175_/Y (NOR2xp33_ASAP7_75t_R)         64.2557  4076.2517 ^
+  apb_interface/_201_/B (OA21x2_ASAP7_75t_R)            0.0000  4076.2517 ^
+  apb_interface/_201_/Y (OA21x2_ASAP7_75t_R)           36.0241  4112.2759 ^
+  PRDATA_o[0] (out)                                      0.0000  4112.2759 ^
+  data arrival time                                               4112.2759
+
+  clock my_clk (rise edge)                           20000.0000 20000.0000
+  clock network delay (ideal)                            0.0000 20000.0000
+  clock uncertainty                                     -50.0000 19950.0000
+  clock reconvergence pessimism                          0.0000 19950.0000
+  output external delay                              -4000.0000 15950.0000
+  data required time                                             15950.0000
+  ---------------------------------------------------------------------------
+  data required time                                             15950.0000
+  data arrival time                                             -4112.2759
+  ---------------------------------------------------------------------------
+  slack (MET)                                                    11837.7246
+
+
+  Startpoint: PRESET_n (input port clocked by my_clk)
+  Endpoint: baud_generator/_280_
+            (recovery check against rising-edge clock my_clk)
+  Path Group: asynchronous
+  Path Type: max
+
+  Point                                                      Incr       Path
+  ---------------------------------------------------------------------------
+  clock my_clk (rise edge)                               0.0000     0.0000
+  clock network delay (ideal)                            0.0000     0.0000
+  input external delay                                4000.0000  4000.0000 ^
+  PRESET_n (in)                                          0.0000  4000.0000 ^
+  baud_generator/_136_/A (INVx1_ASAP7_75t_R)            0.0000  4000.0000 ^
+  baud_generator/_136_/Y (INVx1_ASAP7_75t_R)            3.0269  4003.0269 v
+  baud_generator/_275_/A (NAND2xp33_ASAP7_75t_R)        0.0000  4003.0269 v
+  baud_generator/_275_/Y (NAND2xp33_ASAP7_75t_R)       19.2801  4022.3069 ^
+  baud_generator/_280_/SETN (DFFASRHQNx1_ASAP7_75t_R)   0.0000  4022.3069 ^
+  data arrival time                                               4022.3069
+
+  clock my_clk (rise edge)                           20000.0000 20000.0000
+  clock network delay (ideal)                            0.0000 20000.0000
+  clock uncertainty                                     -50.0000 19950.0000
+  clock reconvergence pessimism                          0.0000 19950.0000
+  baud_generator/_280_/CLK (DFFASRHQNx1_ASAP7_75t_R)    0.0000 19950.0000 ^
+  library recovery time                                 10.9644 19960.9648
+  data required time                                             19960.9648
+  ---------------------------------------------------------------------------
+  data required time                                             19960.9648
+  data arrival time                                             -4022.3069
+  ---------------------------------------------------------------------------
+  slack (MET)                                                    15938.6562
+
+
+  ===========================================================================
+  Timing Summary
+  ===========================================================================
+  Clock                       : my_clk
+  Period                      : 20000.0 ps  (50 MHz target)
+  Clock Uncertainty (setup)   :    50.0 ps
+  Clock Uncertainty (hold)    :    20.0 ps
+  Clock Transition            :    30.0 ps
+
+  Worst Setup Slack (WNS)     : 11837.7246 ps  (MET)
+  Total Negative Slack (TNS)  :     0.0000 ps
+  Worst Hold Slack            :    34.5990 ps  (MET)
+
+  Critical Path Delay         :  4112.28 ps  (4.11 ns)
+  Estimated Max Frequency     :   243.2 MHz
+  Number of paths analyzed    :       2
+  Setup violations            :       0
+  Hold violations             :       0
+  ===========================================================================

@@ -1,0 +1,30 @@
+
+****************************************
+Report : area
+Design : spi_core
+Version: X-2025.06
+Date   : Fri May  1 23:13:11 2026
+****************************************
+
+Information: Updating design information... (UID-85)
+Library(s) Used:
+
+    lsi_10k (File: /home2/BRN69/UTKarsh/VLSI_RN_ONLINE/Verilog_labs/Project/APB_Slave_Master_SPI/lib/lsi_10k.db)
+
+Number of ports:                           33
+Number of nets:                           850
+Number of cells:                          789
+Number of combinational cells:            687
+Number of sequential cells:               102
+Number of macros/black boxes:               0
+Number of buf/inv:                         90
+Number of references:                      33
+
+Combinational area:               1199.000000
+Buf/Inv area:                       93.000000
+Noncombinational area:             911.000000
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:                  2110.000000
+Total area:                 undefined

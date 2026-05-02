@@ -1,0 +1,40 @@
+****************************************
+Report : area
+Design : spi_core
+Tool   : Yosys 0.64 + OpenSTA 3.1.0
+Date   : Sat May 02 13:45:02 2026
+****************************************
+Operating Conditions: TT_0P7V_25C   Library: asap7_merged_RVT_TT
+
+Library(s) Used:
+    asap7_merged_RVT_TT (File: ../lib/asap7_merged_RVT_TT.lib)
+
+Number of ports:                           83
+Number of nets:                           812
+Number of cells:                          646
+Number of combinational cells:            544
+Number of sequential cells:               102
+Number of macros/black boxes:               0
+Number of buf/inv:                         64
+Number of references:                      43
+
+Combinational area:               42.734000
+Buf/Inv area:                      2.799000
+Noncombinational area:            38.666160
+Macro/Black Box area:              0.000000
+Net Interconnect area:      undefined  (No wire load specified)
+Total cell area:                  81.400140
+Total area:                 undefined
+
+  ===========================================================================
+  Per-Module Breakdown
+  ===========================================================================
+  Module                                                Cells   Total Area     Seq Area     Seq%
+  ----------------------------------------------------------------------------------------------
+  APBSlaveI                                               184    24.348600    14.405040   59.16%
+  ShiftReg                                                189    23.007240    10.993320   47.78%
+  BaudRateGen                                             162    18.181260     6.444360   35.45%
+  Slave_select                                            111    15.863040     6.823440   43.01%
+  ----------------------------------------------------------------------------------------------
+  spi_core (total)                                        646    81.400140    38.666160   47.50%
+  ===========================================================================

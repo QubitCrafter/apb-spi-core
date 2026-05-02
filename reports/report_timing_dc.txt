@@ -1,0 +1,57 @@
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : spi_core
+Version: X-2025.06
+Date   : Fri May  1 23:13:11 2026
+****************************************
+
+Operating Conditions: nom_pvt   Library: lsi_10k
+Wire Load Model Mode: top
+
+  Startpoint: apb_interface/SPI_BR_reg[0]
+              (rising edge-triggered flip-flop clocked by my_clk)
+  Endpoint: baud_generator/mosi_send_sclk0_o_reg
+            (rising edge-triggered flip-flop clocked by my_clk)
+  Path Group: my_clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock my_clk (rise edge)                                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  apb_interface/SPI_BR_reg[0]/CP (FD2)                    0.00       0.00 r
+  apb_interface/SPI_BR_reg[0]/Q (FD2)                     2.06       2.06 r
+  U367/Z (AN3)                                            1.13       3.19 r
+  U371/Z (EN)                                             1.26       4.45 f
+  U372/Z (AO4)                                            2.23       6.67 r
+  U324/Z (EN)                                             1.32       8.00 f
+  U387/Z (NR2P)                                           0.94       8.94 r
+  U446/Z (EO)                                             1.26      10.20 f
+  U447/Z (ND2)                                            0.78      10.97 r
+  U450/Z (MUX21LP)                                        0.46      11.43 f
+  U451/Z (IVP)                                            0.62      12.05 r
+  U846/Z (EN)                                             1.13      13.18 f
+  U847/Z (MUX21H)                                         1.21      14.39 f
+  U848/Z (EN)                                             1.13      15.51 f
+  U851/Z (NR2)                                            0.81      16.32 r
+  U853/Z (ND2)                                            0.22      16.54 f
+  U854/Z (NR2)                                            0.81      17.34 r
+  U858/Z (AN2P)                                           0.68      18.03 r
+  U859/Z (AN2P)                                           0.61      18.64 r
+  baud_generator/mosi_send_sclk0_o_reg/D (FD2)            0.00      18.64 r
+  data arrival time                                                 18.64
+
+  clock my_clk (rise edge)                               20.00      20.00
+  clock network delay (ideal)                             0.00      20.00
+  clock uncertainty                                      -0.50      19.50
+  baud_generator/mosi_send_sclk0_o_reg/CP (FD2)           0.00      19.50 r
+  library setup time                                     -0.85      18.65
+  data required time                                                18.65
+  --------------------------------------------------------------------------
+  data required time                                                18.65
+  data arrival time                                                -18.64
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.01

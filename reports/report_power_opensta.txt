@@ -1,0 +1,47 @@
+****************************************
+Report : power
+        -analysis_effort low
+Design : spi_core
+Tool   : Yosys 0.64 + OpenSTA 3.1.0
+Date   : Sat May 02 13:45:02 2026
+****************************************
+Operating Conditions: TT_0P7V_25C   Library: asap7_merged_RVT_TT
+
+Library(s) Used:
+    asap7_merged_RVT_TT (File: ../lib/asap7_merged_RVT_TT.lib)
+
+Note: Switching power requires VCD/SAIF activity file.
+      Internal and leakage power from Liberty analysis.
+      Supply voltage: 0.7V  |  Temperature: 25C
+
+                                   Internal    Switching      Leakage          Total
+                                      Power        Power        Power          Power
+                                        (W)          (W)          (W)            (W)
+  ------------------------------------------------------------------------------------
+  Sequential                       5.32e-06     0.00e+00     1.70e-05       2.23e-05
+  Combinational                    2.00e-06     0.00e+00     2.45e-05       2.65e-05
+  Clock                            0.00e+00     0.00e+00     0.00e+00       0.00e+00
+  Macro                            0.00e+00     0.00e+00     0.00e+00       0.00e+00
+  Pad                              0.00e+00     0.00e+00     0.00e+00       0.00e+00
+  ------------------------------------------------------------------------------------
+  Total                            7.32e-06     0.00e+00     4.14e-05       4.87e-05
+                                        15.0%         0.0%        85.0%
+
+  ===========================================================================
+  Power Summary
+  ===========================================================================
+  Internal Power  :   7.32e-06 W   ( 15.0%)
+  Switching Power :   0.00e+00 W   (  0.0%)   * No activity file provided
+  Leakage Power   :   4.14e-05 W   ( 85.0%)
+  Total Power     :   4.87e-05 W   (48.7 µW)
+
+  Per-Module Breakdown:
+  Module                                           Internal(W)     Leakage(W)       Total(W)
+  ------------------------------------------------------------------------------------------
+  APBSlaveI                                          ~2.08e-06      ~1.44e-05      ~1.65e-05
+  BaudRateGen                                        ~1.73e-06      ~1.18e-05      ~1.36e-05
+  ShiftReg                                           ~2.30e-06      ~1.10e-05      ~1.33e-05
+  Slave_select                                       ~1.21e-06      ~6.82e-06      ~8.03e-06
+  ------------------------------------------------------------------------------------------
+  spi_core (total)                                    7.32e-06       4.14e-05       4.87e-05
+  ===========================================================================

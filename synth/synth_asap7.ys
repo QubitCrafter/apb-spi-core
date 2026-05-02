@@ -1,0 +1,20 @@
+read_verilog ../rtl/APBSlaveI.v
+read_verilog ../rtl/BaudRateGen.v
+read_verilog ../rtl/ShiftReg.v
+read_verilog ../rtl/Slave_select.v
+read_verilog ../rtl/spi_core.v
+hierarchy -check -top spi_core
+proc
+opt
+fsm
+opt
+memory
+opt
+techmap
+opt
+dfflegalize -cell $_DFF_P_ 0 -cell $_DFF_N_ 0 -cell $_DFFSR_PNN_ 0 -cell $_DFFSR_NNN_ 0
+dfflibmap -liberty ../lib/asap7_merged_RVT_TT.lib
+abc -liberty ../lib/asap7_merged_RVT_TT.lib
+opt_clean -purge
+tee -o report_area.txt stat -liberty ../lib/asap7_merged_RVT_TT.lib
+write_verilog -noattr ../synth/spi_core_netlist_asap7.v

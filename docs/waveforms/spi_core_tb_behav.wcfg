@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="spi_core_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="spi_core_tb" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="925.000 ns"></ZoomEndTime>
+      <Cursor1Time time="925.000 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="165"></NameColumnWidth>
+      <ValueColumnWidth column_width="127"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="16" />
+   <wvobject type="logic" fp_name="/spi_core_tb/PCLK">
+      <obj_property name="ElementShortName">PCLK</obj_property>
+      <obj_property name="ObjectShortName">PCLK</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/spi_core_tb/PRESET_n">
+      <obj_property name="ElementShortName">PRESET_n</obj_property>
+      <obj_property name="ObjectShortName">PRESET_n</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/spi_core_tb/PADDR_i">
+      <obj_property name="ElementShortName">PADDR_i[2:0]</obj_property>
+      <obj_property name="ObjectShortName">PADDR_i[2:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/spi_core_tb/PWRITE_i">
+      <obj_property name="ElementShortName">PWRITE_i</obj_property>
+      <obj_property name="ObjectShortName">PWRITE_i</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/spi_core_tb/PSEL_i">
+      <obj_property name="ElementShortName">PSEL_i</obj_property>
+      <obj_property name="ObjectShortName">PSEL_i</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/spi_core_tb/PENABLE_i">
+      <obj_property name="ElementShortName">PENABLE_i</obj_property>
+      <obj_property name="ObjectShortName">PENABLE_i</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/spi_core_tb/PWDATA_i">
+      <obj_property name="ElementShortName">PWDATA_i[7:0]</obj_property>
+      <obj_property name="ObjectShortName">PWDATA_i[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/spi_core_tb/spi_mode_i">
+      <obj_property name="ElementShortName">spi_mode_i[1:0]</obj_property>
+      <obj_property name="ObjectShortName">spi_mode_i[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/spi_core_tb/PRDATA_o">
+      <obj_property name="ElementShortName">PRDATA_o[7:0]</obj_property>
+      <obj_property name="ObjectShortName">PRDATA_o[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/spi_core_tb/PREADY_o">
+      <obj_property name="ElementShortName">PREADY_o</obj_property>
+      <obj_property name="ObjectShortName">PREADY_o</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/spi_core_tb/PSLVERR_o">
+      <obj_property name="ElementShortName">PSLVERR_o</obj_property>
+      <obj_property name="ObjectShortName">PSLVERR_o</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/spi_core_tb/ss_o">
+      <obj_property name="ElementShortName">ss_o</obj_property>
+      <obj_property name="ObjectShortName">ss_o</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/spi_core_tb/sclk_o">
+      <obj_property name="ElementShortName">sclk_o</obj_property>
+      <obj_property name="ObjectShortName">sclk_o</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/spi_core_tb/spi_interrupt_request_o">
+      <obj_property name="ElementShortName">spi_interrupt_request_o</obj_property>
+      <obj_property name="ObjectShortName">spi_interrupt_request_o</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/spi_core_tb/mosi_o">
+      <obj_property name="ElementShortName">mosi_o</obj_property>
+      <obj_property name="ObjectShortName">mosi_o</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/spi_core_tb/miso_i">
+      <obj_property name="ElementShortName">miso_i</obj_property>
+      <obj_property name="ObjectShortName">miso_i</obj_property>
+   </wvobject>
+</wave_config>
