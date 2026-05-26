@@ -21,7 +21,7 @@ module BaudRateGen (
     reg  [11:0] count;
 
     assign pre_sclk = cpol_i;
-    assign BaudRateDivisor_o = (sppr_i + 12'd1) * (12'd1 << (spr_i + 1'b1));
+    assign BaudRateDivisor_o = (sppr_i + 12'd1) * (12'd1 << ({1'b0, spr_i} + 4'd1));
     assign target_count = (BaudRateDivisor_o >> 1) - 12'd1;
     assign mode_o = ((spi_mode_i == 2'b00) | (spi_mode_i == 2'b01)) & (~ss_i) & (~spiswai_i);
 

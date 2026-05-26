@@ -33,7 +33,7 @@ module spi_core #(
     wire miso_rec_sclk_s, miso_rec_sclk0_s;
     wire mosi_snd_sclk_s, mosi_snd_sclk0_s;
 
-    wire spi_mode_s;
+    wire [1:0] spi_mode_s;
 
     // ================= APB INTERFACE =================
     APBSlaveI apb_interface (

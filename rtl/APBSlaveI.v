@@ -24,7 +24,7 @@ module APBSlaveI (
     output wire PREADY_o, 
     output wire PSLVERR_o, 
     output reg send_data_o,
-    output reg spi_mode_o,
+    output reg [1:0] spi_mode_o,
     output reg [7:0] mosi_data_o,
     output reg [2:0] spr_o, 
     output reg [2:0] sppr_o
@@ -105,7 +105,7 @@ module APBSlaveI (
         sppr_o    = SPI_BR[6:4];
         spr_o     = SPI_BR[2:0];
 
-        spi_mode_o = spe & mstr_o;
+        spi_mode_o = (spe & mstr_o) ? 2'b01 : 2'b10;
 
         if (rd_enb) begin
             case (PADDR_i)
